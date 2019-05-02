@@ -20,7 +20,7 @@ attr_accessor :sender, :receiver, :status, :bank_account, :transfer_count
           @sender.balance -= @amount
           @receiver.balance += @amount
           @status = "complete"
-        @transfer_count = 1
+        # @transfer_count = 1
       else
         @status = "rejected"
       end
