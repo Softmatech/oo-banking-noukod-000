@@ -14,7 +14,7 @@ attr_accessor :sender, :receiver, :status, :bank_account
   end
 
   def execute_transaction
-      @sender.valid? ? "Transaction rejected. Please check your account balance." : "Transaction rejected. Please check your account balance."
+      @sender.valid? ? "Ok" : status = "rejected"
   end
 
 end
