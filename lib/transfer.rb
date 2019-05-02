@@ -16,10 +16,11 @@ attr_accessor :sender, :receiver, :status, :bank_account, :transfer_count
   end
 
   def execute_transaction
-      if !@sender.valid?
-        @status = "rejected"
+      if @sender.valid?
+          @sender.deposit(@amount)
+        @transfer_count += 1
       else
-
+        @status = "rejected"
       end
   end
 
