@@ -12,7 +12,7 @@ attr_accessor :sender, :receiver, :status, :bank_account, :transfer_count
   end
 
   def valid?
-      @receiver.valid? && @sender.valid? ? true : false
+      @sender.valid? && @receiver.valid? ? true : false
   end
 
   def execute_transaction
