@@ -2,6 +2,8 @@ class Transfer
 attr_reader :name, :sender, :amount
 attr_accessor :sender, :receiver, :status, :bank_account
 
+      @transfer_count = 0
+
   def initialize(sender,receiver,status)
       @sender = sender
       @receiver = receiver
@@ -14,7 +16,11 @@ attr_accessor :sender, :receiver, :status, :bank_account
   end
 
   def execute_transaction
-      @sender.valid? ? "Ok" : status = "rejected"
+      if @sender.valid?
+        @transfer_count += 1
+      else
+        @status = "rejected"  
+      end
   end
 
 end
