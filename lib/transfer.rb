@@ -19,7 +19,7 @@ attr_accessor :sender, :receiver, :status, :bank_account, :transfer_count
       if @sender.valid?
         @transfer_count += 1
       else
-        @status = "rejected"  
+        @status = "rejected"
       end
   end
 
