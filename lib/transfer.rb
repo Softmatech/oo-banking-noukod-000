@@ -1,6 +1,6 @@
 class Transfer
 attr_reader :name, :sender, :amount
-attr_accessor :sender, :receiver, :status, :bank_account
+attr_accessor :sender, :receiver, :status, :bank_account, :transfer_count
 
       @transfer_count = 0
 
