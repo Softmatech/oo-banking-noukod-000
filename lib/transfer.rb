@@ -10,7 +10,7 @@ attr_accessor :sender, :receiver, :status, :bank_account
   end
 
   def valid?
-      @receiver.valid? ? true :false
+      @receiver.valid? && @sender.valid? ? true : false
   end
 
 end
